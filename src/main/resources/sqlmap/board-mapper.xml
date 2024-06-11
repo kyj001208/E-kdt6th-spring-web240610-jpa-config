@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.nowon.domain.mapper.BoardMapper">
+
+
+	<select id="findAll" resultType="com.green.nowon.domain.dto.BoardDTO">
+		
+		select * from board
+		order by no desc
+		limit 10 offset 45290 
+	
+	</select>
+
+  
+</mapper>
