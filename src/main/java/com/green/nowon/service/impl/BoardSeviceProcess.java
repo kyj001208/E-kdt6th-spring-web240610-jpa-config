@@ -21,10 +21,14 @@ public class BoardSeviceProcess implements BoardService {
 	@Override
 	public void findAllprocess(Model model) {
 		//페이징처리 
+		/*
 		Sort sort=Sort.by(Direction.DESC,"no");
 		Pageable pageable=PageRequest.of(4529, 10, sort);
 		model.addAttribute("list", repository.findAll(pageable));
-		
+		*/
+		int limit=10; 
+		int offset=4542;
+		model.addAttribute("list", repository.selectAllWithPagination(limit,offset));
 	}
 
 }
